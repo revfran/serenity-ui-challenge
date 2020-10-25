@@ -2,26 +2,35 @@
 A simple challenge to run tests against an ecom website
 
 # Requisites
-- Tested with chromedriver (86) against Chrome v86 on Windows. 
-
-
 - Maven with Java 8
+- Tested with chromedriver (86) against Chrome v86 on Windows. Due to technical issues I couldn't advance to make Firefox work on Windows.
+- Tested with chromedriver (86) against Chrome v86 on Mac.
+- Tested with geckodriver (0.27) against Firefox v82 on Mac. 
+
+
 # Adding support for other webdriver/os/browser
-- Add the driver to [drivers](src/test/resources/drivers), add the path in [serenity.properties](serenity.properties)
+- Add the driver to [drivers](src/test/resources/drivers), add the path in [serenity.conf](src/test/resources/serenity.conf)
 - To execute with this driver, change [serenity.conf](src/test/resources/serenity.conf) or set -Dwebdriver.driver property when launching the tests
 
 # How to execute
 
 This command will execute tests and create serenity reports
 
+With Firefox
 ```
-$ mvn test serenity:aggregate
+$ mvn test -Dwebdriver.driver=firefox serenity:aggregate
 ```
 
-Reports will be available after execution in [./target/site/serenity/index.html]
+With Firefox
+```
+$ mvn test -Dwebdriver.driver=chrome serenity:aggregate
+```
 
-Sample reports are available at [index.html](./sampleExecution/index.html)
+Reports are be available after execution in [./target/site/serenity/index.html]
 
+Sample reports are available at 
+- Firefox execution [index.html](./executions/firefox/serenity/index.html)
+- Chrome execution [index.html](./executions/chrome/serenity/index.html)
 
 # Description of the building process
 - Start from [serenity-rest-challenge](https://github.com/revfran/serenity-rest-challenge)
@@ -57,7 +66,8 @@ Sample reports are available at [index.html](./sampleExecution/index.html)
 - Some issues were found when exploring, with and without automation. Those are available in [issues](./defects)
 - Having to run the tests locally is a very complex requirement, that makes configuration more difficult, harder to maintain as browsers/webdrivers change versions, and less portable. I like projects like [zalenium](https://github.com/zalando/zalenium for this
 - Headless chrome browser couldn't be used, as it ends up in a page with a 403 warning. Switching headless flag in serenity.conf solved the issue.
-
+- Chromedriver in mac can't be opened because the developer cannot be verified: [solution link](https://stackoverflow.com/questions/60362018/macos-catalinav-10-15-3-error-chromedriver-cannot-be-opened-because-the-de)
+- Firefox in Windows wouldn't load pages. Versions were compatible. I think it was due to headless configuration in serenity.conf, as I had no problem with Firefox on Mac.
 
 # References
 - [Serenity cucumber starter project](https://github.com/serenity-bdd/serenity-cucumber-starter) 
