@@ -38,6 +38,8 @@ Sample reports are available at
 - Create skeleton with PageObject model following ideas from Serenity cucumber starter project
 - Run simplest scenario (access URL) with different browsers
 - Split logic using [a proper architecture](https://github.com/serenity-bdd/screenplay-pattern-todomvc)
+- Create scenarios for search
+- Create scenario for adding cart
 
 # Testing ideas
 - To come up with a realistic approach to automate some of the paths with 3-5 tests is completely unfeasible.

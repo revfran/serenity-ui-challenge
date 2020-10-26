@@ -1,4 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Basic navigation","Access web page accepting modal windows","SUCCESS","2020-10-26T21:14:25.516496+01:00[Europe/Madrid]","0.0","14.57"
-"Basic navigation","Search for item and see suggestions","SUCCESS","2020-10-26T21:14:40.806307+01:00[Europe/Madrid]","0.0","14.08"
-"Basic navigation","Search for item and go to results page","SUCCESS","2020-10-26T21:14:55.520502+01:00[Europe/Madrid]","0.0","15.5"
+"Basic navigation","Access web page accepting modal windows","SUCCESS","2020-10-26T23:50:16.899082+01:00[Europe/Madrid]","0.0","14.34"
+"Basic navigation","Search for item and see suggestions","SUCCESS","2020-10-26T23:50:31.941151+01:00[Europe/Madrid]","0.0","13.07"
+"Basic navigation","Search for item and go to results page","SUCCESS","2020-10-26T23:50:45.610936+01:00[Europe/Madrid]","0.0","15.92"
+"Basic navigation","Add an item to the cart","SUCCESS","2020-10-26T23:51:02.117795+01:00[Europe/Madrid]","0.0","10.23"

@@ -1,10 +1,5 @@
 package com.revfran.tasks;
 
-import com.revfran.pages.AdidasFiPage;
-import net.serenitybdd.screenplay.Performable;
-import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Enter;
-
 public class Wait {
     /*
     public static Performable untilSearchSuggestionsAppear() {

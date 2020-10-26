@@ -225,7 +225,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-10-2020 21:17</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-10-2020 23:48</span>
     <br style="clear:left"/>
 </div>
 
@@ -250,14 +250,6 @@
                                                     <span class="badge tag-badge" style="background:default;">
                                                         <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
                                                                                           style="background:default;"
-                                                                                          href="c1efd72af3de939c6fc6fff62bf64f0eba02df69114d16fe66c9c9c24bb37833.html">Pending
-                                                        (tag)</a>
-                                                    </span>
-                                                </p>
-                                                <p class="tag">
-                                                    <span class="badge tag-badge" style="background:default;">
-                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
-                                                                                          style="background:default;"
                                                                                           href="5273aa6372c98d8a31bb29b38a9cb9d8a2645d3aa3552aa80e3abb83d8a6a96c.html">User Acceptance
                                                         (tag)</a>
                                                     </span>
@@ -267,6 +259,14 @@
                                                         <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
                                                                                           style="background:default;"
                                                                                           href="10a5f2f3a460e6e6d68ff602db44d230f536902aaa44af73e1ed73109f2a8353.html">Basic Navigation
+                                                        (tag)</a>
+                                                    </span>
+                                                </p>
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="ab629a63a8affd6e8c1a15f78b358719c0439bee8882a82d02e8ea2f284aa9fd.html">Add To Cart
                                                         (tag)</a>
                                                     </span>
                                                 </p>
@@ -417,7 +417,7 @@
                                                                             <a style="margin-left:0.5em;padding-right: 1.5em;"
                                                                                href="4cf32b88febdbf85ab421793caceeeb948beac0af7b1d85de61627f70ab618bc.html"
                                                                                title="View test results">
-                                                                            <a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                                                             </a>
 
                                                                         
@@ -511,7 +511,7 @@
                                                 </div>
 
                                                 <div class="scenario-docs card" id="3ec433f18c4aa48d642ccd7e45262e765ec1a61a11167cd49d1253f2435cfbd6">
-                                                    <div class="scenario-docs card-header pending" style="min-height:1.5em;">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
                                                         <div>
                                                             <span class="scenario-heading">
                                                                 <a href="4cf32b88febdbf85ab421793caceeeb948beac0af7b1d85de61627f70ab618bc.html" title="View test results">Add an item to the cart</a>
@@ -519,26 +519,27 @@
                                                             <span class="scenario-result-icon">
                                                                 
 
-                                                                    <a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <div class="scenario-docs card-body">
-                                                            <p>Given Maria opens adidas Finland store page closing modal windows for &quot;{articleNumber}&quot;</p>
-                                                            <p>Then she should see that the title contains the values &quot;adidas Official Website FI&quot;</p>
-                                                            <p>When she searches for &quot;ultraboost&quot;</p>
-                                                            <p>Then she should see that the title contains the values &quot;adidas Online Shop&quot;</p>
-                                                            <p>And she should see that the search results are related to &quot;ultraboost&quot;</p>
+                                                            <p>Given Maria opens adidas Finland item detail page closing modal windows for &quot;{articleNumber}&quot;</p>
+                                                            <p>Then she should see that the item detail title contains the values &quot;{pageTitle}&quot;</p>
+                                                            <p>When she selects the first size</p>
+                                                            <p>And she adds the article to the bag</p>
+                                                            <p>Then she should see that the bag contains &quot;1&quot; item</p>
+                                                            <p>And she should see that the item descriptions contains &quot;{addedToBagDescription}&quot;</p>
                                                         <div class="examples">
                                                             <p><p>Examples:</p>
 <blockquote>
 </blockquote>
 <div class='example-table-in-scenario'><table>
 <thead>
-<tr><th>articleNumber</th><th></th></tr>
+<tr><th>articleNumber</th><th>pageTitle</th><th>addedToBagDescription</th><th></th></tr>
 </thead>
 <tbody>
-<tr><td>EH2861</td><td><a href='4cf32b88febdbf85ab421793caceeeb948beac0af7b1d85de61627f70ab618bc.html#beforetable'><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></a></td></tr>
+<tr><td>EH2861</td><td>adidas Predator Mutator</td><td>PREDATOR MUTATOR</td><td><a href='4cf32b88febdbf85ab421793caceeeb948beac0af7b1d85de61627f70ab618bc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
 </tbody>
 </table></div>
 </p>
@@ -560,10 +561,10 @@
                                             </div>
                                             <script>
 
-                                                var labels = ['75%', ' ', '25%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 3}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 1}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -604,16 +605,15 @@
                                                                         <a href="fb69d3b94f155f1f08e6136a2559d8f0e6834d7205de40b85c8f3c1073d5c7cc.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">3</td>
-                                                <td class="automated-stats">75%</td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
-                                                                    <td class="aggregate-result-count">
-                                                                        <a href="7729e4664d117574784d495fc6f815044572c8ca09af55d94f8225ba49fa21de.html"><i
-                                                                                class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending</a>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
                                                                     </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">25%</td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -682,11 +682,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>39s</td>
-                                                        <td>39s</td>
-                                                        <td>24ms</td>
+                                                        <td>51s</td>
+                                                        <td>38s</td>
+                                                        <td>12s</td>
                                                         <td>13s</td>
-                                                        <td>9s</td>
+                                                        <td>12s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -745,17 +745,17 @@
                                                                 style="display:none">SUCCESS</span>
                                                     </td>
                                                 </tr>
-                                                <tr class="scenario-result PENDING">
+                                                <tr class="scenario-result SUCCESS">
                                                     <td>
                                                             <a href="4cf32b88febdbf85ab421793caceeeb948beac0af7b1d85de61627f70ab618bc.html">Add an item to the cart</a>
                                                                (1 example)
                                                     </td>
-                                                    <td>5</td>
+                                                    <td>6</td>
                                                     <td> </td>
                                                     <td> </td>
                                                     <td>
-                                                            <a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a> <span
-                                                                style="display:none">PENDING</span>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
                                                     </td>
                                                 </tr>
                                                 </tbody>

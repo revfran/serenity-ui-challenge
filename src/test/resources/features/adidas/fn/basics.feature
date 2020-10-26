@@ -26,14 +26,17 @@ Feature: Basic navigation
     Then she should see that the search title contains the values "adidas Online Shop"
     And she should see that the search results are related to "ultraboost"
 
-  @Pending @basic_navigation:004
+  @basic_navigation:004 @add_to_cart
   Scenario Outline: Add an item to the cart
-    Given Maria opens adidas Finland store page closing modal windows for "<articleNumber>"
-    Then she should see that the title contains the values "adidas Official Website FI"
+    Given Maria opens adidas Finland item detail page closing modal windows for "<articleNumber>"
+    Then she should see that the item detail title contains the values "<pageTitle>"
 
-    When she searches for "ultraboost"
-    Then she should see that the title contains the values "adidas Online Shop"
-    And she should see that the search results are related to "ultraboost"
+    When she selects the first size
+    And she adds the article to the bag
+
+    Then she should see that the bag contains "1" item
+    And she should see that the item descriptions contains "<addedToBagDescription>"
+
     Examples:
-      | articleNumber |
-      | EH2861        |
+      | articleNumber | pageTitle               | addedToBagDescription  |
+      | EH2861        | adidas Predator Mutator | PREDATOR MUTATOR        |
