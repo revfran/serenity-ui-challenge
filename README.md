@@ -36,6 +36,8 @@ Sample reports are available at
 - Start from [serenity-rest-challenge](https://github.com/revfran/serenity-rest-challenge)
 - Adapt dependencies
 - Create skeleton with PageObject model following ideas from Serenity cucumber starter project
+- Run simplest scenario (access URL) with different browsers
+- Split logic using [a proper architecture](https://github.com/serenity-bdd/screenplay-pattern-todomvc)
 
 # Testing ideas
 - To come up with a realistic approach to automate some of the paths with 3-5 tests is completely unfeasible.
@@ -65,9 +67,12 @@ Sample reports are available at
 # Problems found
 - Some issues were found when exploring, with and without automation. Those are available in [issues](./defects)
 - Having to run the tests locally is a very complex requirement, that makes configuration more difficult, harder to maintain as browsers/webdrivers change versions, and less portable. I like projects like [zalenium](https://github.com/zalando/zalenium for this
-- Headless chrome browser couldn't be used, as it ends up in a page with a 403 warning. Switching headless flag in serenity.conf solved the issue.
+- Headless chrome browser couldn't be used, as it ends up in a page with a 403 warning. Switching headless flag in serenity.conf solved the issue. Added proof to [defects folder](./defects/headlessChrome)
 - Chromedriver in mac can't be opened because the developer cannot be verified: [solution link](https://stackoverflow.com/questions/60362018/macos-catalinav-10-15-3-error-chromedriver-cannot-be-opened-because-the-de)
 - Firefox in Windows wouldn't load pages. Versions were compatible. I think it was due to headless configuration in serenity.conf, as I had no problem with Firefox on Mac.
+- Modal windows (delivery popup/accept tracking) are not easy to identify via a unique id or css class, so tests associated with them may be a bit flaky.
+- Overlay category suggestions that appears when typing in search bar don't contain a class to easily locate the elements
+- Store URL for an article is not only related to the article, however I realised, for testability, that going to https://www.adidas.fi/{articleNumber}.html redirects correctly, at least for EH2861 and a couple of other articles I tried.
 
 # References
 - [Serenity cucumber starter project](https://github.com/serenity-bdd/serenity-cucumber-starter) 

@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Basic navigation","Searching for a term","SUCCESS","2020-10-26T00:41:33.536+01:00[Europe/Madrid]","0.0","11.11"
+"Basic navigation","Access web page accepting modal windows","SUCCESS","2020-10-26T21:17:48.49631+01:00[Europe/Madrid]","0.0","13.9"
+"Basic navigation","Search for item and see suggestions","SUCCESS","2020-10-26T21:18:02.591697+01:00[Europe/Madrid]","0.0","12.28"
